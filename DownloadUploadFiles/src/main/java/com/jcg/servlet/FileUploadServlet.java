@@ -25,8 +25,7 @@ public class FileUploadServlet extends HttpServlet {
     }
 
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String applicationPath = getServletContext().getRealPath(""),
-                uploadPath = "C:/studying/web/uploadedFiles";
+        String uploadPath = "C:/studying/web/uploadedFiles";
 
         /***** Check if the upload directory already exists and create it if not *****/
         File fileUploadDirectory = new File(uploadPath);
