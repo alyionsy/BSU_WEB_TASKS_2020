@@ -1,4 +1,4 @@
-package by.ignot.web.email;
+package by.bsu.mailsender;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
