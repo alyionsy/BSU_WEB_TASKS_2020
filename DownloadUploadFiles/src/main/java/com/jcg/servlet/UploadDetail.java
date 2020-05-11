@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class UploadDetail implements Serializable {
 
     private long fileSize;
-    private String fileName, uploadStatus;
+    private String fileName;
+    private String uploadStatus;
 
     private static final long serialVersionUID = 1L;
 

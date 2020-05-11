@@ -22,9 +22,7 @@ public class EmailUtility {
                 logger.info("message sent");
             }
             else throw new NullPointerException();
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        } catch (NullPointerException e){
+        } catch (MessagingException | NullPointerException e) {
             e.printStackTrace();
         }
     }
@@ -48,9 +46,11 @@ public class EmailUtility {
         });
     }
 
-    private static Message getMessage(Session session,String toAddress,String subject,String messageText){
+    private static Message getMessage(Session session,String toAddress,String subject,String messageText)
+    {
+        Message message = null;
         try{
-            Message message = new MimeMessage(session);
+            message = new MimeMessage(session);
             message.setFrom(new InternetAddress(EmailData.LOGIN));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
             message.setSubject(subject);
@@ -59,6 +59,6 @@ public class EmailUtility {
         } catch (MessagingException e) {
             e.printStackTrace();
         }
-        return null;
+        return message;
     }
 }
