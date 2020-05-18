@@ -1,3 +1,7 @@
+package by.bsu.googlespreadsheets;
+
+import by.bsu.googlespreadsheets.util.SpreadsheetsReader;
+import by.bsu.googlespreadsheets.util.SpreadsheetsWriter;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
@@ -10,8 +14,6 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
-import util.SpreadsheetsReader;
-import util.SpreadsheetsWriter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
